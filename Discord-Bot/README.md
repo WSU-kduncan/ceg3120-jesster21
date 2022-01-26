@@ -20,3 +20,4 @@
      - you may have realized that it is lame that it only runs when you run the program.
      - In the real world, things are "always on", not waiting for Bob to turn his PC on and make sure the program is running.
      - Research some possible solutions that would solve this, and discuss why you think it would work.
+        - One way to solve this issue is to move the bot to the cloud (like AWS for us right now). In the real world, we would not have to worry about our services shutting off every four hours like we do now for monetary reasons. If we moved to the cloud, the bot will always be active/responsive to commands and we do not have to worry about everything being powered up.
