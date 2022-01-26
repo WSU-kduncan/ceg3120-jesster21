@@ -41,6 +41,7 @@ async def on_message(message):
         'If you can fake sincerity, you can fake pretty much anything',
         'There is nothing in this universe that can not be explained, eventually'
     ]
+    
     if message.content == 'TV!':
         response = random.choice(office_quotes)
         response = random.choice(house_quotes)
