@@ -1,1 +1,21 @@
-Hi
+1. README.md in Discord-Bot folder
+   - Setup
+     - how to get an API token
+        - I will try to make this as short as possible without leaving TOO MUCH information out:
+            - First, you make an application that the bot will use to authenticate with Discord's APIs on the Discord Developer Portal.
+            - Next, a bot that you use will interact with other users on the server (or guild) that you created on Discord.
+            - After that, you have to add the bot to the server you created.
+            - Next, when you are on the Discord Developer Portal's website, you go to the page labeled "Bot" where, under Build-A-Bot, you can copy the API token for your bot.
+     - where to put it to work with the code
+        - Inside the repo, I made a folder called "Discord-Bot" and I put the file ".env" with the token information inside that folder along with the "bot.py" code
+     - dependencies (what packages need to be installed to run the code)
+        - python3, python3-pip, discord.py, and python-dotenv
+   - Usage
+     - with your changes to the code in place, describe
+     - what commands you can type in your Discord server
+        - In my server, I can type the command "Office!" and get three different responses.
+     - what response this will provide (from your bot)
+   - Research
+     - you may have realized that it is lame that it only runs when you run the program.
+     - In the real world, things are "always on", not waiting for Bob to turn his PC on and make sure the program is running.
+     - Research some possible solutions that would solve this, and discuss why you think it would work.

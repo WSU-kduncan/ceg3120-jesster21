@@ -29,15 +29,21 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    brooklyn_99_quotes = [
+    office_quotes = [
         'The reality of being a writer',
         'A tricky artform',
-	'Would you rather be feared or loved?',
-	'This is how words work, right?'
+	    'Would you rather be feared or loved?',
+	    'This is how words work, right?'
     ]
 
-    if message.content == 'Office!':
-        response = random.choice(brooklyn_99_quotes)
+    house_quotes = [
+        'Its a basic truth of the human condition that everybody lies, The only variable is about what',
+        'If you can fake sincerity, you can fake pretty much anything',
+        'There is nothing in this universe that can not be explained, eventually'
+    ]
+    if message.content == 'TV!':
+        response = random.choice(office_quotes)
+        response = random.choice(house_quotes)
         await message.channel.send(response)
 
 client.run(TOKEN)
