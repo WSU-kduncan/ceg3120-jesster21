@@ -13,8 +13,9 @@
    - Usage
      - with your changes to the code in place, describe
      - what commands you can type in your Discord server
-        - In my server, I can type the command "Office!" and get three different responses.
+        - In my server, I can type the command "TV!" and get three different quotes from The Office and House
      - what response this will provide (from your bot)
+        - 'The reality of being a writer', 'A tricky artform', 'Would you rather be feared or loved?', 'This is how words work, right?', 'Its a basic truth of the human condition that everybody lies, The only variable is about what', 'If you can fake sincerity, you can fake pretty much anything', and 'There is nothing in this universe that can not be explained, eventually'.
    - Research
      - you may have realized that it is lame that it only runs when you run the program.
      - In the real world, things are "always on", not waiting for Bob to turn his PC on and make sure the program is running.

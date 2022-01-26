@@ -33,7 +33,6 @@ async def on_message(message):
         'The reality of being a writer',
         'A tricky artform',
 	    'Would you rather be feared or loved?',
-	    'This is how words work, right?',
     ]
 
     house_quotes = [
