@@ -32,7 +32,7 @@ async def on_message(message):
     office_quotes = [
         'The reality of being a writer',
         'A tricky artform',
-	    'Would you rather be feared or loved?',
+	'Would you rather be feared or loved?',
     ]
 
     house_quotes = [
