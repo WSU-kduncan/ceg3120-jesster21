@@ -11,7 +11,7 @@ For each step below, provide a screenshot that shows the network resource has be
    - Tag it with "YOURLASTNAME-Subnet"
    - Specify a /28 private IP address range
    - Attach it to your VPC
-   - ![Project2-2 Subnet](Images/Project2-2 Subnet.png)
+   - ![Project2-2Subnet](Images/Project2-2 Subnet.png)
    - 
 3. Create an internet gateway
    - Tag it with "YOURLASTNAME-gw"
