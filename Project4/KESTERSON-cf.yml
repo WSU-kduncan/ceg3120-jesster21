@@ -182,7 +182,10 @@ Resources:
             apt-get update && \
             # TODO need to install haproxy
             apt install -y haproxy && \
+<<<<<<< HEAD
             apt install -y apache2 && \
+=======
+>>>>>>> 7516d484d98f1dc96247d2280e7362ba135e50d2
             apt-get install -y git python3 python3-pip && \
             hostnamectl set-hostname proxy && \
             reboot
