@@ -260,5 +260,5 @@ Resources:
             apt install -y apache2 && \
             apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            hostnamectl set-hostname KESTERSON-server1 && \
+            hostnamectl set-hostname KESTERSON-server2 && \
             reboot
