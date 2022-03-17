@@ -179,13 +179,14 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
-            apt-get update && \
+            sudo apt-get update && \
+            sudo apt-get upgrade && \
             # TODO need to install haproxy
-            apt install -y haproxy && \
-            apt install -y apache2 && \
-            apt-get install -y git python3 python3-pip && \
-            hostnamectl set-hostname proxy && \
-            reboot
+            sudo apt install -y haproxy && \
+            sudo apt install -y apache2 && \
+            sudo apt-get install -y git python3 python3-pip && \
+            sudo hostnamectl set-hostname proxy && \
+            sudo reboot
   WebServ1Instance:
     Type: 'AWS::EC2::Instance'
     DependsOn: AttachGateway
@@ -216,14 +217,14 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
-            apt-get update && \
-            apt-get upgrade && \
+            sudo apt-get update && \
+            sudo apt-get upgrade && \
             # TODO need to install apache or nginx
-            apt install -y apache2 && \
-            apt-get install -y git && \
+            sudo apt install -y apache2 && \
+            sudo apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            hostnamectl set-hostname KESTERSON-server1 && \
-            reboot
+            sudo hostnamectl set-hostname KESTERSON-server1 && \
+            sudo reboot
 # TODO: create another webserver instance attached to the private subnet
   WebServ2Instance:
     Type: 'AWS::EC2::Instance'
@@ -255,11 +256,11 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
-            apt-get update && \
-            apt-get upgrade && \
+            sudo apt-get update && \
+            sudo apt-get upgrade && \
             # TODO need to install apache or nginx
-            apt install -y apache2 && \
-            apt-get install -y git && \
+            sudo apt install -y apache2 && \
+            sudo apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            hostnamectl set-hostname KESTERSON-server2 && \
-            reboot
+            sudo hostnamectl set-hostname KESTERSON-server2 && \
+            sudo reboot
