@@ -15,17 +15,10 @@ Setup the following and add documentation or screenshots to your `README.md` fil
      - What file(s) where modified & their location
         - /etc/haproxy/haproxy.cfg
      - What configuration(s) were set (if any)
-        ![Haproxy](images/Haproxy.png)
+      ![Haproxy](images/Haproxy.png)
      - How to restart the service after a configuration change
         - sudo systemctl restart haproxy
-=======
-3. **_HAProxy configuration & documentation requirements_**
-   - How to set up a HAProxy load balancer
-     - What file(s) where modified & their location
-     - What configuration(s) were set (if any)
-     - How to restart the service after a configuration change
-     - Resources used (websites)
->>>>>>> 7516d484d98f1dc96247d2280e7362ba135e50d2
+
 4. **_Webserver 1 & 2 configuration & documentation requirements_**
    - How set up a webserver
      - What file(s) were modified & their location
