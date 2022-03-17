@@ -15,7 +15,7 @@ Setup the following and add documentation or screenshots to your `README.md` fil
      - What file(s) where modified & their location
         - /etc/haproxy/haproxy.cfg
      - What configuration(s) were set (if any)
-      ![Haproxy](images/Haproxy.png)
+   ![Haproxy](images/Haproxy.png)
      - How to restart the service after a configuration change
         - sudo systemctl restart haproxy
 
