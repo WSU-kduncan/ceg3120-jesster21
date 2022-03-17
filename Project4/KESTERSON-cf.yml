@@ -179,13 +179,12 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
-            sudo apt-get update && \
-            sudo apt-get upgrade && \
+            apt-get update && \
             # TODO need to install haproxy
-            sudo apt-get install -y haproxy && \
-            sudo apt-get install -y git python3 python3-pip && \
-            sudo hostnamectl set-hostname proxy && \
-            sudo reboot
+            apt install -y haproxy && \
+            apt-get install -y git python3 python3-pip && \
+            hostnamectl set-hostname proxy && \
+            reboot
   WebServ1Instance:
     Type: 'AWS::EC2::Instance'
     DependsOn: AttachGateway
@@ -216,14 +215,13 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
-            sudo apt-get update && \
-            sudo apt-get upgrade && \
+            apt-get update && \
             # TODO need to install apache or nginx
-            sudo apt-get install -y apache2 && \
-            sudo apt-get install -y git && \
+            apt install -y apache2 && \
+            apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            sudo hostnamectl set-hostname KESTERSON-server1 && \
-            sudo reboot
+            hostnamectl set-hostname KESTERSON-server1 && \
+            reboot
 # TODO: create another webserver instance attached to the private subnet
   WebServ2Instance:
     Type: 'AWS::EC2::Instance'
@@ -255,11 +253,10 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
-            sudo apt-get update && \
-            sudo apt-get upgrade && \
+            apt-get update && \
             # TODO need to install apache or nginx
-            sudo apt-get install -y apache2 && \
-            sudo apt-get install -y git && \
+            apt install -y apache2 && \
+            apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            sudo hostnamectl set-hostname KESTERSON-server2 && \
-            sudo reboot
+            hostnamectl set-hostname KESTERSON-server2 && \
+            reboot
