@@ -140,8 +140,12 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 108.222.118.252/32  # Replace with home / trusted public IP
+          CidrIp: 174.103.159.107/32  # Replace with home / trusted public IP
           # TODO Need more rules for port 80 access
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0
       Tags: 
         - Key: Name
           Value: P4-sg
@@ -205,7 +209,7 @@ Resources:
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
           SubnetId: !Ref PrivateSubnet
-          PrivateIpAddress: 10.0.1.10 # TODO make sure unique to the instance
+          PrivateIpAddress: 10.0.1.11 # TODO make sure unique to the instance
       UserData:
         Fn::Base64:
           !Sub |
@@ -216,3 +220,38 @@ Resources:
             # TODO give it a hostname - hostnamectl  && \
             reboot
 # TODO: create another webserver instance attached to the private subnet
+  WebServ2Instance:
+    Type: 'AWS::EC2::Instance'
+    DependsOn: AttachGateway
+    Properties:
+      ImageId: !FindInMap 
+        - AWSRegionUbuntu
+        - !Ref 'AWS::Region'
+        - !FindInMap 
+          - AWSInstanceType2Arch
+          - t2.micro
+          - Arch
+      InstanceType: t2.micro
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: webserv2
+      NetworkInterfaces:
+        - GroupSet:
+            - !Ref SecurityGroup
+          AssociatePublicIpAddress: 'false'
+          DeviceIndex: '0'
+          DeleteOnTermination: 'true'
+          SubnetId: !Ref PrivateSubnet
+          PrivateIpAddress: 10.0.1.12 # TODO make sure unique to the instance
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash -xe
+            apt-get update && \
+            # TODO need to install apache or nginx
+            apt-get install -y git && \
+            # TODO give it a hostname - hostnamectl  && \
+            reboot
