@@ -6,7 +6,7 @@ Setup the following and add documentation or screenshots to your `README.md` fil
 1. Create an `/etc/hosts` OR `.ssh/config` file on each system that correlates hostnames to private IPs.
    - Description of how file is configured
    - I edited the file "/etc/hosts". The file looks like the following:
-   ![Hosts](Images/Hosts.png)
+   ![Hosts](images/Hosts.png)
 2. Document how to SSH in between the systems utilizing their private IPs.
 3. **_HAProxy configuration & documentation requirements_**
    - How to set up a HAProxy load balancer
