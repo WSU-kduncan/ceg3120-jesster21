@@ -182,8 +182,7 @@ Resources:
             sudo apt-get update && \
             sudo apt-get upgrade && \
             # TODO need to install haproxy
-            sudo apt install -y haproxy && \
-            sudo apt install -y apache2 && \
+            sudo apt-get install -y haproxy && \
             sudo apt-get install -y git python3 python3-pip && \
             sudo hostnamectl set-hostname proxy && \
             sudo reboot
@@ -220,7 +219,7 @@ Resources:
             sudo apt-get update && \
             sudo apt-get upgrade && \
             # TODO need to install apache or nginx
-            sudo apt install -y apache2 && \
+            sudo apt-get install -y apache2 && \
             sudo apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
             sudo hostnamectl set-hostname KESTERSON-server1 && \
@@ -259,7 +258,7 @@ Resources:
             sudo apt-get update && \
             sudo apt-get upgrade && \
             # TODO need to install apache or nginx
-            sudo apt install -y apache2 && \
+            sudo apt-get install -y apache2 && \
             sudo apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
             sudo hostnamectl set-hostname KESTERSON-server2 && \
