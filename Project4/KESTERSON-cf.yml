@@ -181,6 +181,7 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             # TODO need to install haproxy
+            apt install -y haproxy && \
             apt-get install -y git python3 python3-pip && \
             hostnamectl set-hostname proxy && \
             reboot
@@ -215,9 +216,12 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
+            apt-get upgrade && \
             # TODO need to install apache or nginx
+            apt install -y apache2 && \
             apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
+            hostnamectl set-hostname KESTERSON-server1 && \
             reboot
 # TODO: create another webserver instance attached to the private subnet
   WebServ2Instance:
@@ -251,7 +255,10 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
+            apt-get upgrade && \
             # TODO need to install apache or nginx
+            apt install -y apache2 && \
             apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
+            hostnamectl set-hostname KESTERSON-server1 && \
             reboot
