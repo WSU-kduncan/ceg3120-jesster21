@@ -187,7 +187,8 @@ Resources:
             reboot
   WebServ1Instance:
     Type: 'AWS::EC2::Instance'
-    DependsOn: NatGateway
+    DependsOn: [ NatGateway ]
+    Condition: EnabledNatGateway
     Properties:
       ImageId: !FindInMap 
         - AWSRegionUbuntu
@@ -225,7 +226,8 @@ Resources:
 # TODO: create another webserver instance attached to the private subnet
   WebServ2Instance:
     Type: 'AWS::EC2::Instance'
-    DependsOn: NatGateway
+    DependsOn: [ NatGateway ]
+    Condition: EnabledNatGateway
     Properties:
       ImageId: !FindInMap 
         - AWSRegionUbuntu
