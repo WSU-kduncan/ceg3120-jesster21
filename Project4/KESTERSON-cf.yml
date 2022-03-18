@@ -16,6 +16,8 @@ Mappings:
       PV64: NOT_SUPPORTED
       HVM64: ami-09e67e426f25ce0d7 # AMI ID for Ubuntu 20 (ubuntu + apt) - Amazon Linux 2 AMI ami-02e136e904f3da870 (ec2-user + yum)
       HVMG2: NOT_SUPPORTED
+Conditions:
+  EnabledNatGateway: !Equals [ !Ref createNatGateway, 'true' ]
 Resources:
   VPC:
     Type: 'AWS::EC2::VPC'
@@ -87,6 +89,7 @@ Resources:
       Domain: vpc
   NATGateway:
     Type: 'AWS::EC2::NatGateway'
+    Condition: EnabledNatGateway
     Properties:
       AllocationId: !GetAtt 'NATIPAddress.AllocationId' #!Ref NATIPAddress
       ConnectivityType: public
